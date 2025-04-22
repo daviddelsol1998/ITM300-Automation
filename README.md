@@ -1,6 +1,6 @@
 # ITM 300 - Cloud Foundations Automation Scripts
 
-This repository contains automation scripts designed to enhance the teaching experience for ITM 300 - Cloud Foundations. The main script helps instructors quickly generate a student list in the format required for AWS Academy onboarding.
+This repository contains automation scripts designed to enhance the teaching experience for ITM 300 - Cloud Foundations. The `generate_student_list.py` script helps instructors quickly generate a student list in the format required for AWS Academy onboarding.
 
 ---
 
