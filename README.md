@@ -22,7 +22,7 @@ This repository contains automation scripts designed to enhance the teaching exp
    - Open a terminal in the repository root.
    - Run:
      ```sh
-     uv run python generate_student_list.py student_list/YourClassList.xls
+     uv run generate_student_list.py student_list/YourClassList.xls
      ```
    - This will create a file named `YourClassList_students.txt` in the same folder.
 
