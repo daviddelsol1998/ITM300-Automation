@@ -2,13 +2,9 @@ import sys
 import os
 from bs4 import BeautifulSoup
 
-def parse_student_name(name):
-    name = name.strip('"')
-    if ',' in name:
-        last, first_middle = name.split(',', 1)
-        last = last.strip()
-        first_middle = first_middle.strip().replace('_', ' ')
-        return f"{first_middle} {last}"
+def clean_student_name(name):
+    name = name.strip('"').replace(',', '')
+    name = name.replace(' ', '_')
     return name
 
 def main():
@@ -38,8 +34,8 @@ def main():
                 student = cells[student_idx].get_text(strip=True)
                 email = cells[email_idx].get_text(strip=True)
                 if student and email:
-                    name = parse_student_name(student)
-                    outfile.write(f"{name}, {email}\n")
+                    name = clean_student_name(student)
+                    outfile.write(f"{name} {email},\n")
 
 if __name__ == "__main__":
     main()
